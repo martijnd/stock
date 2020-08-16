@@ -13,4 +13,9 @@ class Product extends Model
     {
         return $this->hasMany(Stock::class);
     }
+
+    public function track()
+    {
+        return $this->stock->each->track();
+    }
 }
